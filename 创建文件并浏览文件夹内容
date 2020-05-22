@@ -1,0 +1,34 @@
+import java.io.*;
+public class q{
+	public static void main(String args[]){
+		File file = new File("C:/Users/圣安东尼涛/desktop/test.txt");
+		if(!file.exists()){
+			System.out.println("file not exists");
+		}else{
+			System.out.println("file exists");
+		}
+		if(!file.exists()){
+			try{
+				file.createNewFile();
+			}catch(IOException e){
+				System.out.println("create file false");
+				e.printStackTrace();
+				
+			}
+		}
+		System.out.println("文件存在吗？"+file.exists());
+		System.out.println(file.getName()+"是可读的吗？"+file.canRead());
+		System.out.println(file.getName()+"文件是可写的吗？"+file.canWrite());
+		System.out.println(file.getName()+"的长度"+file.length());
+		System.out.println(file.getName()+"的绝对路径："+file.getAbsolutePath());
+		File dir = new File("C:/Users/圣安东尼涛/desktop");
+		if(dir.isDirectory()){
+			System.out.println(dir.getAbsolutePath()+"是一个文件夹");
+			
+		}
+		File fileName[]=dir.listFiles();
+		for(File name:fileName){
+			System.out.println(name);
+		}
+	}
+}
