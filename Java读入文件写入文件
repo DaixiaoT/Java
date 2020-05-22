@@ -1,0 +1,30 @@
+import java.io.*;
+public class q {
+	public static void main(String args[]) {
+		byte [] a ="FileOutputStream".getBytes();
+		try {
+			FileOutputStream out = new FileOutputStream("c:/users/圣安东尼涛/desktop/test.txt");
+			out.write(a);
+			out.flush();
+			out.close();
+			System.out.println("write success!");
+		} catch(FileNotFoundException e) {
+			System.out.println("file not found!");
+		} catch(IOException e) {
+			System.out.println("I/O error!");
+		}
+		File f = new File("c:/users/圣安东尼涛/desktop/test.txt");
+		byte [] b = new byte[(int)f.length()];
+		try {
+			FileInputStream in = new FileInputStream(f);
+			in.read(b);
+			System.out.println(new String(b));
+			in.close();
+		} catch(FileNotFoundException e) {
+			System.out.println("file not found");
+		}catch(IOException e){
+			System.out.println("File read error"+e);
+		}
+
+	}
+}
