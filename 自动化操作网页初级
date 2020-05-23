@@ -1,0 +1,56 @@
+package study;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+
+
+
+public class Webdriver{
+    public static void main(String[] args) throws InterruptedException{
+        //加载驱动器
+        System.setProperty("webdriver.chrome.driver","c:\\users\\圣安东尼涛\\desktop\\chromedriver.exe");
+        //打开浏览器
+        WebDriver driver = new ChromeDriver();
+        //打开网站
+        driver.get("https://ks.wjx.top/jq/78013211.aspx");
+        //通过id定位所搜框
+        WebElement searchBox = driver.findElement(By.className( "inputtext"));
+        //输入内容
+        searchBox.sendKeys("软件191代晓涛"+Keys.TAB+"软件191班"+Keys.TAB+"数理与信息工程学院"+Keys.TAB+Keys.ENTER+Keys.TAB
+        		+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.ENTER
+        		+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.ENTER
+        		+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB
+        		+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB
+        		+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER
+        		+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER
+        		+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.ENTER+Keys.TAB+Keys.TAB+Keys.ENTER+Keys.TAB+"学习"
+        		
+        		
+        		
+        		
+        		
+        		);
+     
+//        Actions actions = new Actions(driver);
+//        actions.click().perform();
+//        //定位百度一下按钮
+//        WebElement searchButton = driver.findElement(By.id("su"));
+//        //点击百度一下
+//        searchButton.submit();
+//        //等待5s
+//        Thread.sleep(5000);
+        //页面关闭
+//        driver.close();
+
+
+
+    }
+   
+}
