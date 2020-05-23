@@ -1,0 +1,40 @@
+import java.io.*;
+public class q{
+	public static void main(String[] args){
+		write();
+		read();
+	}
+	public static void write(){
+		try{
+			OutputStream out = new FileOutputStream("c:/users/圣安东尼涛/desktop/test.txt");
+			BufferedOutputStream bos = new BufferedOutputStream(out);
+			String info = "我daixiaotao chaoshuai a ";
+			bos.write(info.getBytes());
+			bos.flush();
+			bos.close();
+			out.close();
+			System.out.println("write success!");
+			
+		}catch(FileNotFoundException e){
+			e.printStackTrace();
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	public static void read(){
+		try{
+			File f = new File("c:/users/圣安东尼涛/desktop/test.txt");
+			InputStream in = new FileInputStream(f);
+			BufferedInputStream bis = new BufferedInputStream(in);
+			byte [] b = new byte[(int)f.length()];
+			bis.read(b);
+			System.out.println("读入的内容是："+new String(b));
+			bis.close();
+			in.close();
+		}catch(FileNotFoundException e){
+			e.printStackTrace();
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+}
